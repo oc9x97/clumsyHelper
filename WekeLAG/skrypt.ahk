@@ -22,7 +22,7 @@ Menu, Tray, Add
 if not A_IsAdmin
 	Run *RunAs "%A_ScriptFullPath%"
 
-IfWinExist, clumsy 0.2
+IfWinExist, clumsy 0.3
 {
 
 }
@@ -78,17 +78,17 @@ ChangeButton:
 return
 BestSettingsButton:
 {
-	;ControlClick, Button2, clumsy 0.2
-	ControlGet, var,Checked,,Button4,clumsy 0.2
+	;ControlClick, Button2, clumsy 0.3
+	ControlGet, var,Checked,,Button4,clumsy 0.3
 	loop
 	{
-		ControlGet, var,Checked,,Button4,clumsy 0.2
+		ControlGet, var,Checked,,Button4,clumsy 0.3
 		if var = 0
 		{
-			ControlFocus, Button4, clumsy 0.2
+			ControlFocus, Button4, clumsy 0.3
 			sleep 10
-			ControlClick, Button4, clumsy 0.2
-			ControlClick, Button4, clumsy 0.2
+			ControlClick, Button4, clumsy 0.3
+			ControlClick, Button4, clumsy 0.3
 		}
 		else
 		{
@@ -96,12 +96,12 @@ BestSettingsButton:
 		}
 	}
 	sleep 50
-	ControlSetText, Edit2, 3000, clumsy 0.2
+	ControlSetText, Edit2, 3000, clumsy 0.3
 	sleep 50
-	ControlGet, var, Choice,,Edit1,clumsy 0.2
+	ControlGet, var, Choice,,Edit1,clumsy 0.3
 	if var != outbound
 	{
-		ControlSetText, Edit1, outbound, clumsy 0.2
+		ControlSetText, Edit1, outbound, clumsy 0.3
 	}
 	msgbox, Skonczone szefunciu, milego zabijania :)
 	return
@@ -128,5 +128,5 @@ return
 
 StartLag:
 {
-	ControlClick, Button2, clumsy 0.2
+	ControlClick, Button2, clumsy 0.3
 }
